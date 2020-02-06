@@ -1,3 +1,6 @@
+heroku:    http://botondnagy-sandbox.herokuapp.com/
+
+
 #  VS Code + TypeScript + Node.js + GitHub + Heroku
 
 ## Heroku teszt:
