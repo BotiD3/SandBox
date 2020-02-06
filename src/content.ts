@@ -1,4 +1,5 @@
-﻿/* eslint-disable @typescript-eslint/no-unused-vars */
+﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
 /* eslint-disable no-var */
@@ -31,11 +32,55 @@ export default class Content {
 
         // Kezd a kódolást innen -->
 
-        var age: number = 32; // number variable
-        var name: string = "John"; // string variable
-        var isUpdated: boolean = true; // Boolean variable
-        let proba: string = "Alma";
-        res.write(`${age} ${name} ${isUpdated} `);
+        let personName: string = "Jóska Pista";
+        let pesronDepartment: string = "Jedlik";
+        res.write(`${personName} ide jár: ${pesronDepartment}`);
+        //string
+
+        let isHetvege: boolean = false;
+        res.write(`\nHétvége van-e: ${isHetvege} \n`);
+        //boolean
+
+        let fruits: string[] = ["Barack", "Szilva", "Körte"];
+        for (let index = 0; index < fruits.length; index++) {
+            res.write(`${fruits[index]} `);
+        }
+        //array
+
+        let personAge: number = 17;
+        let person: [string, string, number] = [personName, pesronDepartment, personAge];
+        res.write(`\nTuple: ${person}`);
+        //tuple
+
+        enum Autok {
+            Lada = 1,
+            Traban = 2,
+            Warburg = 3,
+            Skoda = 4
+        }
+
+        res.write(`\nAz auto Indexe: ${Autok.Lada}`);
+        //enum
+
+        let szovegVagySzam: string | number;
+        szovegVagySzam = "ABC";
+        res.write(`\n${szovegVagySzam} `);
+        szovegVagySzam = 123;
+        res.write(`${szovegVagySzam}`);
+        //union
+
+        let valami: any = "Hello World!";
+        res.write(`\nValami: ${valami} `);
+        valami = 23;
+        res.write(`${valami} `);
+        valami = true;
+        res.write(`${valami} `);
+        //any
+
+        function sayHi(): void {
+            res.write("Hello");
+        }
+        sayHi();
 
         // <---- Fejezd be a kódolást
 
