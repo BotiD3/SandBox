@@ -29,10 +29,12 @@ export default class Content {
         res.write("<title>Jedlik Ts Template</title>");
         res.write("</head>");
         res.write("<body><form><pre>");
-
+         
+        res.write("\n\n<u>Excel repository:</u> ");
+        res.write("<a href='https://docs.google.com/spreadsheets/d/1pHFX9p2gpSutl_xY99T14rQMmyRQQHger3z7M9gu1Jo/edit?usp=sharing' target='_blank'>Excel</a><br>");
         // Kezd a kódolást innen -->
 
-        let personName: string = "Jóska Pista";
+        /*let personName: string = "Jóska Pista";
         let pesronDepartment: string = "Jedlik";
         res.write(`${personName} ide jár: ${pesronDepartment}`);
         //string
@@ -81,7 +83,7 @@ export default class Content {
             res.write("Hello");
         }
         sayHi();
-
+*/
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
